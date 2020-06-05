@@ -10,10 +10,11 @@
   <body>
     <main>
       <h1>Forms - Playground</h1>
-      <form class="form">
+      <form method="POST" action="https://dev.cotenfrontend.pl" class="form">
         <label for="firstName">Your name:</label>
         <p>
           <input
+            required
             class="form__item"
             name="firstName"
             id="firstName"
@@ -24,35 +25,124 @@
         <label for="lastName">Your name:</label>
         <p>
           <input
+            required
             class="form__item"
             name="lastName"
-            id="firstName"
+            id="lastName"
             placeholder="Wpisz swoję nazwisko"
           />
         </p>
-      </form>
-      <fieldset>
-        <legend>Adres:</legend>
+        <label for="emailAddress">Adres email:</label>
+        <p>
+          <input
+            required
+            class="form__item"
+            name="emailAddress"
+            id="emailAddress"
+            type="email"
+            placeholder="Wpisz swój adres email"
+          />
+        </p>
+        <label for="password">Hasło:</label>
+        <p>
+          <input
+            required
+            class="form__item"
+            name="password"
+            id="password"
+            type="password"
+          />
+        </p>
 
-        <label for="street">Ulica:</label>
+        <label for="band">Wybierz zespół:</label>
+        <select id="band">
+          <option value="band-1">Metallica</option>
+          <option value="band-2">Radiohead</option>
+          <option value="band-3">Nirvana</option>
+        </select>
+
+        <fieldset>
+          <legend>Adres:</legend>
+
+          <label for="street">Ulica:</label>
+          <p>
+            <input
+              required
+              class="form__item"
+              name="street"
+              id="street"
+              placeholder="Wpisz swoją ulicę"
+            />
+          </p>
+          <label for="city">Miasto:</label>
+          <p>
+            <input
+              required
+              class="form__item"
+              name="city"
+              id="city"
+              placeholder="Wpisz swoje miasto"
+            />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Ulubiony smak lodów:</legend>
+          <p>
+            <label
+              ><input
+                name="iceCream"
+                type="radio"
+                value="chocolate"
+              />Chocolate</label
+            >
+          </p>
+          <p>
+            <label
+              ><input name="iceCream" type="radio" value="lemon" />Lemon</label
+            >
+          </p>
+          <p>
+            <label
+              ><input
+                name="iceCream"
+                type="radio"
+                value="pistachio"
+              />Pistachio</label
+            >
+          </p>
+          <p>
+            <label
+              ><input
+                name="iceCream"
+                type="radio"
+                value="vanilla"
+              />Vanilla</label
+            >
+          </p>
+        </fieldset>
         <p>
-          <input
-            class="form__item"
-            name="street"
-            id="street"
-            placeholder="Wpisz swoją ulicę"
-          />
+        <label for="aboutYou">O Tobie:</label>
+        <textarea id="aboutYou" name="aboutYou">
+Napisz kilka słów o sobie...</textarea
+        >
         </p>
-        <label for="city">Miasto:</label>
+        <label for="myFile">Załącz plik:</label>
         <p>
-          <input
-            class="form__item"
-            name="city"
-            id="city"
-            placeholder="Wpisz swoje miasto"
-          />
+          <input class="form__item" name="myFile" id="myFile" type="file" />
         </p>
-      </fieldset>
+
+        <p>
+          <label
+            ><input name="agreement" type="checkbox" value="agree" />I
+            agree</label
+          >
+        </p>
+
+        <p>
+          <input name="submit" type="submit" value="Wyślij" />
+        </p>
+
+      </form>
     </main>
   </body>
 </html>
