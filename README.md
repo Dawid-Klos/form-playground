@@ -1,3 +1,5 @@
+![cover](https://github.com/Dawid-Klos/form-playground/blob/master/cover.png)
+
 # form-playground
 
 The form-playground project has been done during the [WTF: Co ten Frontend?](https://cotenfrontend.pl/) course as a part of the practice.
